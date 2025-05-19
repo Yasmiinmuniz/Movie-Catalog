@@ -6,22 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "check-a11y": "eslint --ext .ts,.tsx --plugin jsx-a11y ./app"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "axios": "^1.9.0",
+    "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.2"
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.1.7",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
-    "@eslint/eslintrc": "^3"
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5"
   }
 }
