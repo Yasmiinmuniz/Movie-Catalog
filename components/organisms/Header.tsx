@@ -1,37 +1,44 @@
 'use client';
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import Navbar from "./Navbar";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import Navbar from './Navbar';
 
-const Header = () => {
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-sm">
+    <header className="bg-gray-950 border-b border-gray-800 text-white">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
 
-          {/* LOGO */}
-          <div className="md:flex md:items-center md:gap-12">
-            <Link href="/">
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
-              src="/images/logoCineYaMi.png"
-              alt="Logo CineYaMi"
-              width={180}
-              height={150}
+                src="/images/logoCineYaMi.png"
+                alt="Logo CineYaMi"
+                width={160}
+                height={50}
+                className="h-auto"
+                priority
               />
             </Link>
           </div>
 
-          {/* MENU */}
           <div className="hidden md:block">
             <Navbar />
           </div>
 
-          {/* BOTÃO MOBILE */}
           <div className="block md:hidden">
-            <button className="rounded-sm bg-gray-100 p-2 text-gray-600 dark:bg-gray-800 dark:text-white">
-              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+            <button
+              onClick={toggleMenu}
+              className="rounded bg-gray-800 p-2 text-white hover:bg-red-600 transition"
+              aria-label="Abrir menu"
+            >
+              <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none">
                 <path
                   stroke="currentColor"
                   strokeWidth="2"
@@ -42,11 +49,14 @@ const Header = () => {
               </svg>
             </button>
           </div>
-
         </div>
+
+        {isMenuOpen && (
+          <div className="md:hidden mt-4">
+            <Navbar />
+          </div>
+        )}
       </div>
     </header>
   );
-};
-
-export default Header;
+}

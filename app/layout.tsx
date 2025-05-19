@@ -17,16 +17,20 @@ export const metadata: Metadata = {
     description: 'Explore o melhor catálogo de filmes com tecnologia OMDB API',
     images: [
       {
-        url: '../public/images/logoCineYaMi.png',
-        width: 1200,
-        height: 630,
+        url: '/images/og-banner.jpg', // Coloque sua imagem em public/images/og-banner.jpg
+        width: 1920,
+        height: 1080,
+        alt: 'CineYami - Catálogo de Filmes',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
   }
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0f0f0f',
+  themeColor: '#170F1F',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
@@ -42,11 +46,20 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+          sizes="any"
+        />
       </head>
       <body className={`${poppins.variable} font-sans bg-gray-950 text-gray-100 antialiased`}>
-        <div className="min-h-screen flex flex-col">
-          {children}
+        <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900 relative">
+          <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none" />
+          
+          <main className="flex-1 relative z-10">
+            {children}
+          </main>
         </div>
       </body>
     </html>

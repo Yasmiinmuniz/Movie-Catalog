@@ -2,12 +2,13 @@
 
 import React, { useState } from 'react';
 import { Input } from '@/components/atoms/Input';
-import { Button } from '@/components/atoms/Button';
+import Button from '@/components/atoms/Button';
 import { FiSearch } from 'react-icons/fi';
-import { fetchMovies } from '@/api/api'; 
+import { fetchMovies } from '@/api/api';
 import { Movie } from '@/types/movie';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
+import MovieResultCard from '@/components/molecules/MovieResultCard';
 
 export default function SearchPage() {
   const [query, setQuery] = useState('');
@@ -74,27 +75,7 @@ export default function SearchPage() {
         {results.length > 0 && (
           <section className="space-y-4">
             {results.map((movie) => (
-              <div
-                key={movie.imdbID}
-                className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-md transition flex gap-4"
-              >
-                {movie.Poster !== 'N/A' ? (
-                  <img
-                    src={movie.Poster}
-                    alt={movie.Title}
-                    className="w-24 h-36 object-cover rounded"
-                  />
-                ) : (
-                  <div className="w-24 h-36 bg-gray-600 flex items-center justify-center rounded text-sm text-gray-300">
-                    Sem imagem
-                  </div>
-                )}
-                <div>
-                  <h3 className="text-xl font-semibold">{movie.Title}</h3>
-                  <p className="text-gray-400">Ano: {movie.Year}</p>
-                  <p className="text-gray-400">Tipo: {movie.Type}</p>
-                </div>
-              </div>
+              <MovieResultCard key={movie.imdbID} movie={movie} />
             ))}
           </section>
         )}

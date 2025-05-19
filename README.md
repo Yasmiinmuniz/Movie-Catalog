@@ -1,47 +1,57 @@
-# Movie Catalog - CineYaMi
+# CineYaMi – Catálogo de Filmes
 
-Aplicação web desenvolvida com **React**, **TypeScript**, **Tailwind CSS** e consumo da API pública [OMDb](https://www.omdbapi.com/), permitindo a busca, exibição e organização de filmes. O projeto adota a arquitetura **Atomic Design** para os componentes e segue o padrão de estrutura baseado em **Roles App**.
+Aplicação web desenvolvida com **React**, **Next.js**, **TypeScript** e **Tailwind CSS**, que consome a API pública [OMDb](https://www.omdbapi.com/). O projeto permite a busca, visualização e filtragem de filmes, com interface responsiva e moderna. A arquitetura segue os princípios do **Atomic Design** e da estrutura por **roles/domínios de responsabilidade**.
 
 
 ## Tecnologias Utilizadas
 
-- **React** – Biblioteca JavaScript para criação de interfaces.
-- **TypeScript** – Superset de JavaScript com tipagem estática.
-- **Tailwind CSS** – Framework utilitário para estilização.
-- **OMDb API** – Fonte de dados sobre filmes.
-- **Atomic Design** – Organização de componentes em átomos, moléculas, organismos, templates e páginas.
-- **Roles App Architecture** – Estrutura por domínios de responsabilidade (ex: pages, components, hooks, lib, etc.).
+- **React & Next.js** – Para renderização de páginas e componentes.
+- **TypeScript** – Tipagem estática para maior segurança e produtividade.
+- **Tailwind CSS** – Estilização moderna com classes utilitárias.
+- **OMDb API** – Fonte de dados para filmes.
+- **Atomic Design** – Componentização em átomos, moléculas, organismos, etc.
+- **Roles App Architecture** – Estrutura de pastas baseada em responsabilidades (components, pages, hooks, etc).
+
 
 ## Funcionalidades
-- Visualização de filmes em destaque
-- Página de detalhes dos filmes
-- Página de contato (formulário)
-- Layout responsivo e acessível
-- Carregamento de dados da API OMDb
-- Componentes reutilizáveis e organizados
 
-## Como Executar
-Clone o repositório:
+- Busca de filmes por nome
+- Exibição de detalhes dos filmes
+- Filtro por categorias (Ação, Drama, Comédia, etc)
+- Layout responsivo para diferentes dispositivos
+- Feedback visual de carregamento
+- Componentes reutilizáveis organizados com Atomic Design
+
+![CineYaMi Preview](public/images/preview.png)
+
+## Instalação e Execução
+
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/Yasmiinmuniz/Movie-Catalog.git
-cd movie-app
-```
+cd Movie-Catalog
+````
 
-### Instale as dependências:
+### 2. Instale as dependências
 
 ```bash
 npm install
 # ou
 yarn
 ```
-### Configure a chave da API OMDb:
-Crie um arquivo .env.local na raiz do projeto:
+
+### 3. Configure a chave da API OMDb
+
+Crie um arquivo `.env.local` na raiz do projeto com o seguinte conteúdo:
 
 ```env
 NEXT_PUBLIC_OMDB_API_KEY=your_api_key_here
 ```
-### Execute o projeto:
+
+Você pode obter uma chave gratuita em: [https://www.omdbapi.com/apikey.aspx](https://www.omdbapi.com/apikey.aspx)
+
+### 4. Inicie o servidor de desenvolvimento
 
 ```bash
 npm run dev
@@ -49,6 +59,11 @@ npm run dev
 yarn dev
 ```
 
-## Autor
+Acesse o projeto em `http://localhost:3000`.
 
-Desenvolvido por Yasmin da Silva Muniz
+## Autora
+
+Desenvolvido por [Yasmin da Silva Muniz](https://www.linkedin.com/in/yasmiinmuniz/)
+
+GitHub: [@Yasmiinmuniz](https://github.com/Yasmiinmuniz)
+Instagram: [@yasminnmunizz](https://www.instagram.com/yasminnmunizz/)

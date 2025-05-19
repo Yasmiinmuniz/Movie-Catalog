@@ -5,7 +5,7 @@ import { FiUser, FiMail, FiMessageCircle } from 'react-icons/fi';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 import { Input } from '@/components/atoms/Input';
-import { Button } from '@/components/atoms/Button';
+import Button from '@/components/atoms/Button';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -32,17 +32,26 @@ export default function ContactPage() {
     <div className="flex flex-col min-h-screen bg-dark text-light">
       <Header />
 
-      <main className="flex-grow max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-5xl font-display tracking-tighter text-center mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-          Fale Conosco
-        </h1>
-        <p className="text-center text-light/70 max-w-xl mx-auto mb-12">
-          Seja para dúvidas, sugestões ou qualquer outro contato, estamos aqui para ajudar você. Preencha o formulário e nossa equipe responderá o mais rápido possível.
-        </p>
+      <main className="flex-grow max-w-4xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-12">
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start w-full">
+            <h1 className="text-5xl font-display tracking-tighter mb-6 text-primary">
+              Fale Conosco
+            </h1>
+            <p className="text-light/70 max-w-xl mb-0">
+              Seja para dúvidas, sugestões ou qualquer outro contato, estamos aqui para ajudar você. Preencha o formulário e nossa equipe responderá o mais rápido possível.
+            </p>
+            <img
+              src="/images/og-banner.jpg"
+              alt="Banner"
+              className="mt-6 rounded-xl shadow-lg max-w-xs w-full h-auto"
+            />
+          </div>
+        </div>
 
         <form
           onSubmit={handleSubmit}
-          className="bg-mid rounded-2xl shadow-xl p-8 space-y-6 max-w-3xl mx-auto"
+          className="bg-mid rounded-2xl shadow-xl p-8 space-y-6 max-w-3xl w-full md:w-1/2"
         >
           <div>
             <label htmlFor="name" className="block mb-2 font-semibold text-light/80">
@@ -103,13 +112,15 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <Button
-            type="submit"
-            disabled={status === 'sending'}
-            className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-light font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            {status === 'sending' ? 'Enviando...' : 'Enviar Mensagem'}
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              type="submit"
+              disabled={status === 'sending'}
+              className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-light font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              {status === 'sending' ? 'Enviando...' : 'Enviar Mensagem'}
+            </Button>
+          </div>
 
           {status === 'success' && (
             <p className="text-center text-green-400 font-semibold">
