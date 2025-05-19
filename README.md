@@ -24,7 +24,7 @@ Aplicação web desenvolvida com **React**, **TypeScript**, **Tailwind CSS** e c
 Clone o repositório:
 
 ```bash
-git clone #
+git clone https://github.com/Yasmiinmuniz/Movie-Catalog.git
 cd movie-app
 ```
 
