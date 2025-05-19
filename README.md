@@ -1,28 +1,24 @@
 # CineYaMi – Catálogo de Filmes
 
-Aplicação web desenvolvida com **React**, **Next.js**, **TypeScript** e **Tailwind CSS**, que consome a API pública [OMDb](https://www.omdbapi.com/). O projeto permite a busca, visualização e filtragem de filmes, com interface responsiva e moderna. A arquitetura segue os princípios do **Atomic Design** e da estrutura por **roles/domínios de responsabilidade**.
+O projeto **Movie-Catalog** é uma aplicação web desenvolvida com **React, Next.js, TypeScript e Tailwind CSS**, que consome a API pública **OMDb**. Ela permite a busca, visualização e filtragem de filmes, com uma interface responsiva e moderna. A arquitetura segue os princípios do **Atomic Design** e da estrutura por roles/domínios de responsabilidade.
 
+![CineYaMi Preview](public/images/preview.png)
 
 ## Tecnologias Utilizadas
-
 - **React & Next.js** – Para renderização de páginas e componentes.
 - **TypeScript** – Tipagem estática para maior segurança e produtividade.
 - **Tailwind CSS** – Estilização moderna com classes utilitárias.
 - **OMDb API** – Fonte de dados para filmes.
 - **Atomic Design** – Componentização em átomos, moléculas, organismos, etc.
-- **Roles App Architecture** – Estrutura de pastas baseada em responsabilidades (components, pages, hooks, etc).
+- **Roles App Architecture** – Estrutura de pastas baseada em responsabilidades (components, contexts, pages, hooks, etc).
 
-
-## Funcionalidades
-
+## Principais Funcionalidades
 - Busca de filmes por nome
 - Exibição de detalhes dos filmes
 - Filtro por categorias (Ação, Drama, Comédia, etc)
 - Layout responsivo para diferentes dispositivos
 - Feedback visual de carregamento
 - Componentes reutilizáveis organizados com Atomic Design
-
-![CineYaMi Preview](public/images/preview.png)
 
 ## Instalação e Execução
 
