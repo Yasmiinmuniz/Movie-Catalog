@@ -1,18 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useFavorites } from '@/contexts/FavoritesContext';
 import MovieCard from '@/components/molecules/MovieCard';
-import { Movie } from '@/types/movie';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 
 export default function FavoritesPage() {
-  const [favorites, setFavorites] = useState<Movie[]>([]);
-
-  useEffect(() => {
-    const favs = JSON.parse(localStorage.getItem('favorites') || '[]');
-    setFavorites(favs);
-  }, []);
+  const { favorites } = useFavorites();
 
   return (
     <>
@@ -22,7 +16,9 @@ export default function FavoritesPage() {
         <h1 className="text-4xl font-extrabold mb-10 text-center">Seus Filmes Favoritos</h1>
 
         {favorites.length === 0 ? (
-          <p className="text-center text-gray-400 text-lg">Você ainda não adicionou filmes aos favoritos.</p>
+          <p className="text-center text-gray-400 text-lg">
+            Você ainda não adicionou filmes aos favoritos.
+          </p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {favorites.map((movie) => (
