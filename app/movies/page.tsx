@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
+import Link from 'next/link';
 import { useMovies } from '@/hooks/useMovies';
 import MovieCard from '@/components/molecules/MovieCard';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
-import Link from 'next/link';
 import { Input } from '@/components/atoms/Input';
 import Button from '@/components/atoms/Button';
 
@@ -40,31 +40,23 @@ export default function MoviesPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-dark text-light">
+    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
       <Header />
 
-      <main className="flex-grow max-w-6xl mx-auto px-4 py-8">
-        <h1 className="text-5xl font-display tracking-tighter text-center mb-6 bg-gradient-to-r from-red-600 to-purple-600 bg-clip-text text-transparent">
+      <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-red-500 to-purple-600 bg-clip-text text-transparent">
           Catálogo de Filmes
         </h1>
 
-        {/* Categoria selecionada */}
-        {selectedCategory && (
-          <p className="text-center mb-6 text-light/80 text-sm">
-            Exibindo resultados para categoria: <span className="font-semibold text-primary">{categories.find(cat => cat.value === selectedCategory)?.label}</span>
-          </p>
-        )}
-
-        {/* Botões de categoria */}
         <div className="flex flex-wrap gap-3 justify-center mb-8">
           {categories.map((cat) => (
             <button
               key={cat.value}
               onClick={() => handleCategoryClick(cat.value)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 selectedCategory === cat.value
-                  ? 'bg-primary text-dark shadow-lg shadow-primary/40'
-                  : 'bg-mid text-light/90 hover:bg-mid/80 hover:text-white shadow-md shadow-dark/20'
+                  ? 'bg-red-500 text-white shadow-lg'
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               }`}
             >
               {cat.label}
@@ -72,56 +64,60 @@ export default function MoviesPage() {
           ))}
         </div>
 
-        {/* Campo de busca */}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row gap-4 mb-12 justify-center max-w-2xl mx-auto"
+          className="flex flex-col sm:flex-row gap-4 mb-12 max-w-2xl mx-auto"
         >
-          <div className="flex-1 relative">
-            <Input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Buscar filmes..."
-              className="w-full"
-            />
-          </div>
-          <Button type="submit" className="sm:w-auto px-8">
+          <Input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Buscar filmes..."
+            className="flex-1 bg-gray-800 border-gray-700 text-white"
+          />
+          <Button
+            type="submit"
+            className="sm:w-auto px-8 bg-red-500 hover:bg-red-600"
+          >
             Buscar
           </Button>
         </form>
 
-        {/* Resultados */}
         {loading && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...Array(6)].map((_, i) => (
-              <div key={i} className="h-96 bg-mid rounded-xl shadow-lg animate-pulse" />
+              <div
+                key={i}
+                className="h-80 bg-gray-800 rounded-xl animate-pulse"
+              />
             ))}
           </div>
         )}
 
         {error && (
-          <p className="text-center text-red-400 text-lg font-medium py-12">
+          <p className="text-center text-red-400 text-lg py-8">
             {error}
           </p>
         )}
 
         {!loading && !error && movies.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {movies.map((movie) => (
-              <Link 
-                key={movie.imdbID} 
+              <Link
+                key={movie.imdbID}
                 href={`/movies/${movie.imdbID}`}
-                className="group transform transition duration-300 hover:scale-105 hover:z-10"
+                className="group transform transition duration-300 hover:scale-105"
               >
-                <MovieCard movie={movie} />
+                <MovieCard 
+                  movie={movie}
+                />
               </Link>
             ))}
           </div>
         )}
       </main>
 
-      <Footer />
+      <Footer  />
     </div>
   );
 }

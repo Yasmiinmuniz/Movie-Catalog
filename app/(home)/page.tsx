@@ -22,7 +22,7 @@ export default function HomePage() {
           className="relative h-[85vh] min-h-[500px] flex items-center justify-center overflow-hidden"
         >
           <Image
-            src="/images/banner.jpg" // Substitua por imagem válida
+            src="/images/banner.jpg"
             alt="Banner de destaque com filmes"
             fill
             className="object-cover object-center absolute inset-0 z-0"
