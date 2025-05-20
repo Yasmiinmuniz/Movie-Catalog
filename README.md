@@ -4,6 +4,8 @@ O projeto **Movie-Catalog** é uma aplicação web desenvolvida com **React, Nex
 
 ![CineYaMi Preview](public/images/preview.png)
 
+## Acesse a aplicação online: movie-catalog-one.vercel.app
+
 ## Tecnologias Utilizadas
 - **React & Next.js** – Para renderização de páginas e componentes.
 - **TypeScript** – Tipagem estática para maior segurança e produtividade.
@@ -34,7 +36,7 @@ cd Movie-Catalog
 ```bash
 npm install
 # ou
-yarn
+yarn install
 ```
 
 ### 3. Configure a chave da API OMDb
@@ -62,4 +64,3 @@ Acesse o projeto em `http://localhost:3000`.
 Desenvolvido por [Yasmin da Silva Muniz](https://www.linkedin.com/in/yasmiinmuniz/)
 
 GitHub: [@Yasmiinmuniz](https://github.com/Yasmiinmuniz)
-Instagram: [@yasminnmunizz](https://www.instagram.com/yasminnmunizz/)
