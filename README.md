@@ -4,7 +4,7 @@ O projeto **Movie-Catalog** é uma aplicação web desenvolvida com **React, Nex
 
 ![CineYaMi Preview](public/images/preview.png)
 
-Acesse a aplicação online: [movie-catalog-one.vercel.app]
+Acesse a aplicação online: ([CineYami](https://movie-catalog-one.vercel.app))
 
 ## Tecnologias Utilizadas
 - **React & Next.js** – Para renderização de páginas e componentes.
