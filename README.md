@@ -21,6 +21,7 @@ Acesse a aplicação online: [CineYami - Movie Catalog](https://movie-catalog-on
 - Layout responsivo para diferentes dispositivos
 - Feedback visual de carregamento
 - Componentes reutilizáveis organizados com Atomic Design
+- Cadastro de usuário por meio de formulário
 
 ## Instalação e Execução
 
@@ -29,7 +30,7 @@ Acesse a aplicação online: [CineYami - Movie Catalog](https://movie-catalog-on
 ```bash
 git clone https://github.com/Yasmiinmuniz/Movie-Catalog.git
 cd Movie-Catalog
-````
+```
 
 ### 2. Instale as dependências
 
