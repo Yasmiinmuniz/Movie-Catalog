@@ -39,6 +39,11 @@ export default function Footer() {
                 <Link href="/contact" className="text-gray-400 hover:text-red-500 transition-colors">
                   Contato
                 </Link>
+                <li>
+                  <Link href="/formRegister" className="text-gray-400 hover:text-red-500 transition-colors">
+                    Cadastrar
+                  </Link>
+                </li>
               </li>
             </ul>
           </div>

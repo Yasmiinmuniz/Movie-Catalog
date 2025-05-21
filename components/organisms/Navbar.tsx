@@ -10,6 +10,7 @@ const navItems = [
   { name: "Filmes", href: "/movies" },
   { name: "Contato", href: "/contact" },
   { name: "Buscar", href: "/search" },
+   { name: "Cadastrar", href: "/formRegister" },
 ];
 
 const Navbar = () => {
