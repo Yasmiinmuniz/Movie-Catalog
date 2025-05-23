@@ -1,0 +1,205 @@
+{
+    "GlobalMetadata": {
+        "Title": "CineYami",
+        "Description": "Explore o melhor catálogo de filmes com tecnologia OMDB API",
+        "OG": {
+            "Title": "CineYami | Descubra Filmes Incríveis",
+            "Description": "Explore o melhor catálogo de filmes com tecnologia OMDB API",
+            "ImageAlt": "CineYami - Catálogo de Filmes"
+        }
+    },
+    "HomePage": {
+        "Banner": {
+            "AriaLabel": "Banner de destaque com filmes",
+            "AltText": "Banner de destaque com filmes"
+        },
+        "Hero": {
+            "Title": "Filmes que você ama",
+            "Description": "Descubra, assista e compartilhe seus filmes favoritos em um só lugar.",
+            "ExploreButton": "Explorar",
+            "CatalogButton": "Ver Catálogo"
+        },
+        "FeaturedSection": {
+            "Title": "Em Destaque",
+            "ViewAllLink": "Ver todos →",
+            "Error": "Falha ao carregar filmes. Por favor, tente novamente mais tarde."
+        }
+    },
+    "ContactPage": {
+        "Title": "Fale Conosco",
+        "Description": "Seja para dúvidas, sugestões ou qualquer outro contato, estamos aqui para ajudar você. Preencha o formulário e nossa equipe responderá o mais rápido possível.",
+        "BannerAlt": "Banner de contato com pessoas se comunicando",
+        "Form": {
+            "NameLabel": "Nome",
+            "NamePlaceholder": "Seu nome",
+            "EmailLabel": "Email",
+            "EmailPlaceholder": "seu@email.com",
+            "MessageLabel": "Mensagem",
+            "MessagePlaceholder": "Escreva sua mensagem...",
+            "SendButton": "Enviar Mensagem",
+            "SendingButton": "Enviando...",
+            "SuccessMessage": "Mensagem enviada com sucesso!",
+            "ErrorMessage": "Erro ao enviar mensagem. Tente novamente."
+        }
+    },
+    "FavoritesPage": {
+        "Title": "Seus Filmes Favoritos",
+        "EmptyMessage": "Você ainda não adicionou filmes aos favoritos."
+    },
+    "MoviesPage": {
+        "Title": "Catálogo de Filmes",
+        "Categories": {
+            "Marvel": "Todos",
+            "Action": "Ação",
+            "Comedy": "Comédia",
+            "Drama": "Drama",
+            "Horror": "Terror",
+            "Sci-fi": "Ficção",
+            "Romance": "Romance",
+            "Animation": "Animação"
+        },
+        "SearchInputPlaceholder": "Buscar filmes...",
+        "SearchButton": "Buscar",
+        "ErrorMessage": "Erro ao carregar filmes: {error}. Por favor, tente novamente.",
+        "NoResultsMessage": "Nenhum filme encontrado para sua busca. Tente uma consulta diferente."
+    },
+    "SearchPage": {
+        "Title": "Pesquisar Filmes",
+        "Description": "Digite o nome de um filme para buscar.",
+        "SearchInputPlaceholder": "Buscar por título...",
+        "SearchButton": "Buscar",
+        "SearchingButton": "Buscando...",
+        "NoResultsFallback": "Nenhum resultado encontrado.",
+        "FetchError": "Erro ao buscar filmes. Verifique sua conexão ou chave da API."
+    },
+    "Form": {
+        "Title": "Cadastre-se",
+        "Submission": {
+            "Success": "Cadastro realizado com sucesso!",
+            "Error": "Erro ao cadastrar. Tente novamente.",
+            "UnexpectedError": "Ocorreu um erro inesperado. Tente novamente."
+        },
+        "Fields": {
+            "Name": {
+                "Label": "Nome Completo",
+                "Placeholder": "Digite seu nome completo"
+            },
+            "Email": {
+                "Label": "Email",
+                "Placeholder": "exemplo@email.com"
+            },
+            "Password": {
+                "Label": "Senha",
+                "Placeholder": "********"
+            },
+            "ConfirmPassword": {
+                "Label": "Confirmar Senha",
+                "Placeholder": "********"
+            },
+            "Bio": {
+                "Label": "Sobre você",
+                "Placeholder": "Conte um pouco sobre você (opcional)"
+            },
+            "Gender": {
+                "Label": "Gênero",
+                "AriaLabel": "Selecione seu gênero",
+                "Female": "Feminino",
+                "Male": "Masculino",
+                "Other": "Outro"
+            },
+            "Terms": {
+                "Accept": "Aceito os",
+                "Link": "termos de uso"
+            }
+        },
+        "Validation": {
+            "NameRequired": "Nome é obrigatório",
+            "EmailRequired": "Email é obrigatório",
+            "EmailInvalid": "Email inválido",
+            "PasswordRequired": "Senha obrigatória",
+            "PasswordMinLength": "A senha deve ter pelo menos 6 caracteres",
+            "PasswordsMismatch": "As senhas não coincidem",
+            "GenderRequired": "Selecione um gênero",
+            "TermsRequired": "Você deve aceitar os termos"
+        },
+        "SubmitButton": "Cadastrar"
+    },
+    "MovieCard": {
+        "Share": {
+            "Title": "Confira o filme: {movieTitle}",
+            "Text": "Eu encontrei este incrível filme: {movieTitle}",
+            "LinkCopiedAlert": "Link copiado para a área de transferência!"
+        },
+        "AriaLabels": {
+            "MovieCard": "Filme {movieTitle}, lançado em {movieYear}",
+            "ViewDetails": "Ver detalhes do filme {movieTitle}",
+            "MoviePoster": "Pôster do filme {movieTitle}",
+            "RemoveFavorite": "Remover dos favoritos",
+            "AddFavorite": "Adicionar aos favoritos",
+            "ShareMovie": "Compartilhar filme",
+            "QuickActions": "Ações rápidas do filme",
+            "MovieGenres": "Gêneros do filme"
+        },
+        "UnknownRuntime": "Duração desconhecida"
+    },
+    "MovieResultCard": {
+        "NoImage": "Sem imagem",
+        "Year": "Ano",
+        "Type": "Tipo"
+    },
+    "SearchBar": {
+        "Placeholder": "Buscar filmes...",
+        "AriaLabelInput": "Buscar filmes",
+        "ButtonText": "Buscar",
+        "AriaLabelButton": "Buscar"
+    },
+    "Footer": {
+        "Slogan": "O melhor lugar para descobrir e assistir seus filmes favoritos.",
+        "LinksSection": {
+            "Title": "Links",
+            "Home": "Início",
+            "Movies": "Filmes",
+            "Favorites": "Favoritos",
+            "Contact": "Contato",
+            "Register": "Cadastrar"
+        },
+        "LegalSection": {
+            "Title": "Legal",
+            "TermsOfUse": "Termos de Uso",
+            "PrivacyPolicy": "Política de Privacidade",
+            "Cookies": "Cookies"
+        },
+        "SocialMediaSection": {
+            "Title": "Redes Sociais",
+            "LinkedIn": "LinkedIn",
+            "Instagram": "Instagram",
+            "GitHub": "GitHub"
+        },
+        "LanguageSwitcher": {
+            "Label": "Selecionar idioma",
+            "English": "English",
+            "Spanish": "Español",
+            "Portuguese": "Português"
+        },
+        "Copyright": {
+            "AllRightsReserved": "Todos os direitos reservados.",
+            "DataProvidedBy": "Dados fornecidos por"
+        }
+    },
+    "Header": {
+        "LogoAlt": "Logo CineYaMi",
+        "OpenMenuAriaLabel": "Abrir menu"
+    },
+    "Navbar": {
+        "AriaLabelNavigation": "Navegação Principal",
+        "Home": "Início",
+        "Favorites": "Favoritos",
+        "Movies": "Filmes",
+        "Contact": "Contato",
+        "Search": "Buscar",
+        "Register": "Cadastrar"
+    },
+    "FavoritesContext": {
+        "ContextError": "useFavorites deve ser usado dentro de um FavoritesProvider"
+    }
+}
